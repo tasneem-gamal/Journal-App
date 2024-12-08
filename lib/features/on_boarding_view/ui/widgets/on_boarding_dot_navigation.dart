@@ -9,7 +9,7 @@ class OnBoardingDotNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: MediaQuery.sizeOf(context).height * 0.05,
+      bottom: MediaQuery.sizeOf(context).height * 0.06,
       left: 24,
       child: SmoothPageIndicator(
         controller: PageController(),

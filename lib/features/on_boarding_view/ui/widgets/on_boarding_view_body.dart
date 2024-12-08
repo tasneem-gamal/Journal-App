@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:journal_app/core/theming/images_constants.dart';
 import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_dot_navigation.dart';
+import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_next_button.dart';
 import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_page.dart';
 import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_skip.dart';
 
@@ -31,11 +32,13 @@ class OnBoardingViewBody extends StatelessWidget {
           ],
         ),
         const OnBoardingSkip(),
-        const OnBoardingDotNavigation()
+        const OnBoardingDotNavigation(),
+        const OnBoardingNextButton()
       ],
     );
   }
 }
+
 
 
 
