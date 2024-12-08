@@ -4,8 +4,8 @@ import 'package:journal_app/core/constants/constants.dart';
 import 'package:journal_app/core/helper_functions/screen_size_methods.dart';
 import 'package:journal_app/core/theming/styles.dart';
 
-class OnBoardingPageOne extends StatelessWidget {
-  const OnBoardingPageOne({
+class OnBoardingPage extends StatelessWidget {
+  const OnBoardingPage({
     super.key, required this.title, required this.subTitle, required this.image,
   });
   final String title, subTitle, image;
