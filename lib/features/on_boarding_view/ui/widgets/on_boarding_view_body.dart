@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:journal_app/core/theming/images_constants.dart';
 import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_page.dart';
+import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_skip.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -27,9 +28,12 @@ class OnBoardingViewBody extends StatelessWidget {
                 image: ImagesConstants.onBoardingThree
             ),
           ],
-        )
+        ),
+        const OnBoardingSkip()
       ],
     );
   }
 }
+
+
 
