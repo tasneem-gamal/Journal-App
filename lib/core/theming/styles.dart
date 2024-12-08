@@ -20,6 +20,17 @@ class Styles {
         fontSize: 16.sp, 
         fontWeight: FontWeight.w500,
       );
+  static TextStyle textStyle16RegularLight =
+      TextStyle(
+        fontSize: 16.sp, 
+        fontWeight: FontWeight.w400,
+        color: ColorsManger.lightGreyText
+      );
+  static TextStyle textStyle18Medium =
+      TextStyle(
+        fontSize: 18.sp, 
+        fontWeight: FontWeight.w500,
+      );
   static TextStyle textStyle12MediumBlue =
       TextStyle(
         fontSize: 12.sp, 

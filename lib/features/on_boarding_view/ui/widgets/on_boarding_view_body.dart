@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:journal_app/core/constants/constants.dart';
 import 'package:journal_app/core/helper_functions/screen_size_methods.dart';
 import 'package:journal_app/core/theming/images_constants.dart';
 import 'package:journal_app/core/theming/styles.dart';
@@ -12,22 +14,46 @@ class OnBoardingViewBody extends StatelessWidget {
       children: [
         PageView(
           children: [
-            Column(
-              children: [
-                Image(
-                  height: ScreenSizeMethods.screenHeight(context) * 0.6,
-                  width: ScreenSizeMethods.screenWidth(context) * 0.8,
-                  image: const AssetImage(ImagesConstants.onBoardingOne)
-                ),
-                Text(
-                  'Capture your thoughts, one entry at a time.',
-                  style: Styles.textStyle16Medium,
-                )
-              ],
+            OnBoardingPageOne(
+                title: 'Capture your thoughts.',
+                subTitle: r'Write it all down, it’s your story. Every thought matters, start typing.',
+                image: ImagesConstants.onBoardingOne
             )
           ],
         )
       ],
+    );
+  }
+}
+
+class OnBoardingPageOne extends StatelessWidget {
+  const OnBoardingPageOne({
+    super.key, required this.title, required this.subTitle, required this.image,
+  });
+  final String title, subTitle, image;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: Constants.appPadding,
+      child: Column(
+        children: [
+          Image(
+            height: ScreenSizeMethods.screenHeight(context) * 0.6,
+            width: ScreenSizeMethods.screenWidth(context) * 0.8,
+            image: AssetImage(image)
+          ),
+          Text(
+            title,
+            style: Styles.textStyle18Medium,
+          ),
+          SizedBox(height: 8.h,),
+          Text(
+            subTitle,
+            style: Styles.textStyle16RegularLight,
+            textAlign: TextAlign.center,
+          )
+        ],
+      ),
     );
   }
 }
