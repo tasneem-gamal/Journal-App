@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:journal_app/features/on_boarding_view/logic/on_boarding_controller.dart';
 
 class OnBoardingNextButton extends StatelessWidget {
   const OnBoardingNextButton({
@@ -12,7 +13,9 @@ class OnBoardingNextButton extends StatelessWidget {
       bottom: MediaQuery.sizeOf(context).height * 0.04,
       right: 0,
       child: ElevatedButton(
-        onPressed: (){}, 
+        onPressed: (){
+          OnBoardingController.instance.nextPage();
+        }, 
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blue,
           shape: const CircleBorder()
