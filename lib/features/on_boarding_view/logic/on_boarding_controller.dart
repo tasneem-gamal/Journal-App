@@ -18,7 +18,7 @@ class OnBoardingController extends GetxController{
 
   void nextPage(){
     if(currentPageIndex.value == 2){
-      //Get.to(page);
+      
     } else{
       int page = currentPageIndex.value + 1 ;
       pageController.jumpToPage(page);
