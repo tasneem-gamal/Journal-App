@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:journal_app/core/routing/app_router.dart';
 import 'package:journal_app/core/theming/images_constants.dart';
 import 'package:journal_app/features/on_boarding_view/logic/on_boarding_controller.dart';
 import 'package:journal_app/features/on_boarding_view/ui/widgets/on_boarding_dot_navigation.dart';
@@ -11,8 +13,8 @@ class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
   @override
   Widget build(BuildContext context) {
-   
-    final controller = Get.put(OnBoardingController());
+    final GoRouter router = AppRouter.router;
+    final controller = Get.put(OnBoardingController(router: router));
 
     return Stack(
       children: [

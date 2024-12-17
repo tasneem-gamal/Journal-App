@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:journal_app/core/routing/app_router.dart';
 
 class OnBoardingController extends GetxController{
   static OnBoardingController get instance => Get.find();
+
+  final GoRouter router;
+  OnBoardingController({required this.router});
 
   final pageController = PageController();
   var currentPageIndex = 0.obs; // observer which is going to change the design without using stateful widget
@@ -18,7 +23,7 @@ class OnBoardingController extends GetxController{
 
   void nextPage(){
     if(currentPageIndex.value == 2){
-      
+      router.push(AppRouter.kHomeView);
     } else{
       int page = currentPageIndex.value + 1 ;
       pageController.jumpToPage(page);
